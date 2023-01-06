@@ -1,0 +1,46 @@
+// Google Font Import
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+// Brand Colours
+$grey: #D3D6DB;
+$black1: #3A4750;
+$black2: #303841;
+$red: #BE3144;
+
+// Global Styles
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: $black2 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+// Heading Overlay
+
+.hero {
+    background-color: $red;
+    clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
+    .overlay {
+
+        background-image: url("../../assets/images/home-header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(0 0, 79% 0, 62% 100%, 0% 100%);
+        width: 100%;
+        height: 400px;
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 7vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #fff !important;
+    }
+}
+
+
