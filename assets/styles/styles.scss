@@ -10,14 +10,27 @@ $red: #BE3144;
 // Global Styles
 * {
     font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
+    // padding: 0;
+    // margin: 0;
+    color: $black2;
+}
+
+.nav-link, .active{
     color: $black2 !important;
 }
 
 .hidden {
     display: none;
 }
+
+.red-icon, b{
+    color: $red !important;
+}
+
+.text-centered {
+    text-align: center;
+}
+
 
 // Heading Overlay
 
@@ -44,3 +57,228 @@ $red: #BE3144;
 }
 
 
+// Skewed Containers
+.box1 {
+    width: 100%;
+    height: 600px;
+    background-color: $black2;
+    webkit-transform: skewY(6deg);
+    -moz-transform: skewY(6deg);
+    -ms-transform: skewY(6deg);
+    -o-transform: skewY(6deg);
+    transform: skewY(6deg);
+  }
+  
+  .box1 > *{
+  webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+  }
+
+  .box2 {
+    width: 100%;
+    height: 600px;
+    background-color: $red;
+    webkit-transform: skewY(-6deg);
+    -moz-transform: skewY(-6deg);
+    -ms-transform: skewY(-6deg);
+    -o-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+    -webkit-transform: skewY(-6deg);
+}
+  
+  .box2 >*{
+  webkit-transform: skewY(6deg);
+  -moz-transform: skewY(6deg);
+  -ms-transform: skewY(6deg);
+  -o-transform: skewY(6deg);
+  transform: skewY(6deg);
+  -webkit-transform: skewY(6deg);
+}
+
+// Portfolio Cards
+.portfolio-header {
+    text-align: center;
+    color: #fff !important;
+    z-index: 9;
+}
+.portfolio-body {
+    text-align: center;
+    color: #fff !important;
+}
+
+//Buttons
+
+
+    .btn-red-solid {
+        text-align: center;
+        border: none;
+        background-color: $red;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-transform: capitalize;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        width: max-content;
+        display: inline-block;
+    }    
+    .btn-red-solid-square {
+        text-align: center;
+        border: none;
+        background-color: $red;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-transform: capitalize;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        width: max-content;
+        display: inline-block;
+    }  
+    .btn-black-solid {
+        text-align: center;
+        border: none;
+        background-color: $black2;
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-transform: capitalize;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+        width: max-content;
+        display: inline-block;
+    }
+
+// Contact Form
+
+.contact-form > * {
+
+
+    @import "bootstrap/functions";
+    @import "bootstrap/variables";
+    @import "bootstrap/mixins";
+    
+    $font-family-sans-serif: 'Montserrat', sans-serif;
+    
+    
+    
+    body {
+        font-family: $font-family-sans-serif;
+        background-color: #fff;
+        line-height: 1.9;
+        color: darken(#ccc, 25%);
+    }
+    
+    
+    
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: $font-family-sans-serif;
+        color: $black;
+    }
+    a {
+        transition: .3s all ease;
+        &, &:hover {
+            text-decoration: none!important;
+        }
+    }
+    .text-black {
+        color: #000;
+    }
+    .content {
+        padding: 7rem 0;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+    .form-control {
+        border: none;
+        // border: 1px solid #ccc;
+        background: #f3f3f3;
+        &:active, &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #000;
+            background: #f3f3f3;
+        }
+    }
+    .col-form-label {
+        color: #000;
+    }
+    .btn, .form-control, .custom-select {
+        height: 50px;
+    }
+    .custom-select {
+        &:active, &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #000;
+        }
+    }
+    
+    .btn {
+        border: none;
+        border-radius: 4px!important;
+        &.btn-primary {
+            background: $black;
+            color: $white;
+            padding: 15px 20px;
+        }
+        &:hover {
+            color: $white;
+        }
+        &:active, &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    
+    .box {
+        padding: 40px;
+        background: $white;
+        box-shadow: -30px 30px 0px 0 rgba($black, .08);
+        h3 {
+            font-size: 14px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+    
+    
+    label.error {
+        font-size: 12px;
+        color: red;
+    }
+    
+    #message {
+        resize: vertical;
+    }
+    #form-message-warning, #form-message-success {
+        display: none;
+    }
+    #form-message-warning {
+        color: #B90B0B;
+    }
+    #form-message-success {
+        color: #55A44E;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .submitting {
+        float: left;
+        width: 100%;
+        padding: 10px 0;
+        display: none;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000;
+    }   
+}
